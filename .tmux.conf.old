@@ -1,0 +1,26 @@
+# Initial .tmux.conf file
+
+set -g prefix C-a
+unbind C-b
+bind C-a send-prefix
+
+unbind r
+bind r source-file ~/.tmux.conf \; display "Reloaded"
+
+set -g status-right ' %a %h-%d %H:%M '
+
+setw -g mode-mouse on
+
+unbind-key -t vi-copy v
+setw -g mode-keys vi
+bind-key -t vi-copy 'v' begin-selection # Begin selection in copy mode
+bind-key -t vi-copy 'C-v' rectangle-toggle # Begin selection in copy mode
+bind-key -t vi-copy 'y' copy-selection # Yank selection in copy mode
+
+# List of plugins
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'nhdaly/tmux-scroll-copy-mode'
+set -g @plugin 'tmux-plugins/tmux-battery'
+
+# Initialize TMUX plugin manager
+run '~/.tmux/plugins/tpm/tpm'
