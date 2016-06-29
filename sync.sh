@@ -72,18 +72,14 @@ function checkProgs(){
 function installProgs(){
     if [[ $installBash != "" || $installTmux != "" || $installVim != "" ]]; then
         case "$distro" in
-            'arch') echo "Updating pacman and installing ${installBash}${installTmux}${installVim}"
+            "arch") echo "Updating pacman and installing ${installBash}${installTmux}${installVim}"
                 `sudo pacman -Syu $installBash $installTmux $installVim`
                 ;;
             "rhel fedora") echo "Updating yum and installing ${installBash}${installTmux}${installVim}"
                 `sudo yum update`
                 `sudo yum install $installBash $installTmux $installVim`
                 ;;
-            'debian') echo "Updating apt-get and installing ${installBash}${installTmux}${installVim}"
-                `sudo apt-get update && sudo apt-get upgrade`
-                `sudo apt-get install $installBash $installTmux $installVim`
-                ;;
-            'ubuntu') echo "Updating apt-get and installing ${installBash}${installTmux}${installVim}"
+            "debian") echo "Updating apt-get and installing ${installBash}${installTmux}${installVim}"
                 `sudo apt-get update && sudo apt-get upgrade`
                 `sudo apt-get install $installBash $installTmux $installVim`
                 ;;
