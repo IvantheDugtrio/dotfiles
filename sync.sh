@@ -25,7 +25,7 @@ function getSysInfo(){
 
 # Check for bash, tmux, and vim
 function checkProgs(){
-    if [[ "$(which bash)" ]]; then
+    if [[ "$(which bash >& /dev/null)" ]]; then
         if [[ "$distro" == "bsd" ]]; then
             cp `pwd`/.bashrc ~/.bash_profile
         elif [[ "$distro" == "win32" ]]; then
@@ -40,7 +40,7 @@ function checkProgs(){
         installBash="bash "
     fi
 
-    if [[ "$(which tmux)" ]]; then
+    if [[ "$(which tmux >& /dev/null)" ]]; then
         # tmux is installed!
         if [[ "$(tmux -V | grep 2)" ]]; then
             # Use new .tmux.conf
@@ -55,7 +55,7 @@ function checkProgs(){
         installTmux="tmux "
     fi
 
-    if [[ "$(which vim)" ]]; then
+    if [[ "$(which vim >& /dev/null)" ]]; then
         if [[ "$(vim --version | grep 7.4)" ]]; then
             # Use new .vimrc
             cp `pwd`/.vimrc ~/.vimrc

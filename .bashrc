@@ -106,15 +106,15 @@ if [[ "$(which vim)" ]]; then
 fi
 
 # aliases for system package managers
-if [[ "$(which apt-get)" ]]; then
+if [[ "$(which apt-get >& /dev/null)" ]]; then
     alias agu='sudo apt-get update && sudo apt-get upgrade'
     alias agi='sudo apt-get install'
-elif [[ "$(which dnf)" ]]; then
+elif [[ "$(which dnf >& /dev/null)" ]]; then
     alias dnu='sudo dnf update'
     alias dni='sudo dnf install'
-elif [[ "$(which pacman)" ]]; then
+elif [[ "$(which pacman >& /dev/null)" ]]; then
     alias pu='sudo pacman -Syu'
-elif [[ "$(which yum)" ]]; then
+elif [[ "$(which yum >& /dev/null)" ]]; then
     alias yu='sudo yum update'
     alias yi='sudo yum install'
 fi
