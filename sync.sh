@@ -27,12 +27,12 @@ function getSysInfo(){
 function checkProgs(){
     if [[ "$(which bash)" ]]; then
         if [[ "$distro" == "bsd" ]]; then
-            "$(cp `pwd`/.bashrc.bsd ~/.bash_profile)"
+            cp `pwd`/.bashrc.bsd ~/.bash_profile
         elif [[ "$distro" == "win32" ]]; then
             # Figure out later
-            "$(cp `pwd`/.bashrc.win32 ~/.bashrc)"
+            cp `pwd`/.bashrc.win32 ~/.bashrc
         elif [[ "$distro" != "" ]]; then
-            "$(cp `pwd`/.bashrc ~/.bashrc)"
+            cp `pwd`/.bashrc ~/.bashrc
         fi
     else
         # Skip for now
@@ -44,12 +44,12 @@ function checkProgs(){
         # tmux is installed!
         if [[ "$(tmux -V | grep 2)" ]]; then
             # Use new .tmux.conf
-            "$(cp `pwd`/.tmux.conf ~/.tmux.conf)"
-            "$(cp -r `pwd`/.tmux ~/.tmux)"
+            cp `pwd`/.tmux.conf ~/.tmux.conf
+            cp -r `pwd`/.tmux ~/.tmux
         else
             # use old .tmux.conf
-            "$(cp `pwd`/.tmux.conf.old ~/.tmux.conf)"
-            "$(cp -r `pwd`/.tmux ~/.tmux)"
+            cp `pwd`/.tmux.conf.old ~/.tmux.conf
+            cp -r `pwd`/.tmux ~/.tmux
         fi
     else
         installTmux="tmux "
@@ -58,8 +58,8 @@ function checkProgs(){
     if [[ "$(which vim)" ]]; then
         if [[ "$(vim --version | grep 7.4)" ]]; then
             # Use new .vimrc
-            "$(cp `pwd`/.vimrc ~/.vimrc)"
-            "$(cp -r `pwd`/.vim ~/.vim)"
+            cp `pwd`/.vimrc ~/.vimrc
+            cp -r `pwd`/.vim ~/.vim
         fi
     else
         installVim="vim "
