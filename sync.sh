@@ -27,10 +27,10 @@ function getSysInfo(){
 function checkProgs(){
     if [[ "$(which bash)" ]]; then
         if [[ "$distro" == "bsd" ]]; then
-            cp `pwd`/.bashrc.bsd ~/.bash_profile
+            cp `pwd`/.bashrc ~/.bash_profile
         elif [[ "$distro" == "win32" ]]; then
             # Figure out later
-            cp `pwd`/.bashrc.win32 ~/.bashrc
+            cp `pwd`/.bashrc ~/.bashrc
         elif [[ "$distro" != "" ]]; then
             cp `pwd`/.bashrc ~/.bashrc
         fi

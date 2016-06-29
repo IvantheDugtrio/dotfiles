@@ -75,13 +75,21 @@ esac
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
+    if [[ "$OSTYPE" == *"darwin"* || "$OSTYPE" == *"freebsd"* ]]; then
+        alias ls='ls -G'
+        #alias dir='dir -G'
+        #alias vdir='vdir -G'
+        alias grep='grep -G'
+        alias fgrep='fgrep -G'
+        alias egrep='egrep -G'
+    else
+        alias ls='ls --color=auto'
+        #alias dir='dir --color=auto'
+        #alias vdir='vdir --color=auto'
+        alias grep='grep --color=auto'
+        alias fgrep='fgrep --color=auto'
+        alias egrep='egrep --color=auto'
+    fi
 fi
 
 # colored GCC warnings and errors
@@ -91,6 +99,25 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+
+# alias for vim
+if [[ "$(which vim)" ]]; then
+    alias v='vim'
+fi
+
+# aliases for system package managers
+if [[ "$(which apt-get)" ]]; then
+    alias agu='sudo apt-get update && sudo apt-get upgrade'
+    alias agi='sudo apt-get install'
+elif [[ "$(which dnf)" ]]; then
+    alias dnu='sudo dnf update'
+    alias dni='sudo dnf install'
+elif [[ "$(which pacman)" ]]; then
+    alias pu='sudo pacman -Syu'
+elif [[ "$(which yum)" ]]; then
+    alias yu='sudo yum update'
+    alias yi='sudo yum install'
+fi
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
