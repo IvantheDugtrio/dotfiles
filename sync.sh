@@ -25,7 +25,7 @@ function getSysInfo(){
 
 # Check for bash, tmux, and vim
 function checkProgs(){
-    if [[ "$(which bash >& /dev/null)" ]]; then
+    if [[ $(which bash) ]]; then
         if [[ "$distro" == "bsd" ]]; then
             cp `pwd`/.bashrc ~/.bash_profile
         elif [[ "$distro" == "win32" ]]; then
@@ -40,7 +40,7 @@ function checkProgs(){
         installBash="bash "
     fi
 
-    if [[ "$(which tmux >& /dev/null)" ]]; then
+    if [[ $(which tmux) ]]; then
         # tmux is installed!
         if [[ "$(tmux -V | grep 2)" ]]; then
             # Use new .tmux.conf
@@ -52,16 +52,18 @@ function checkProgs(){
             cp -r `pwd`/.tmux ~/.tmux
         fi
     else
+        echo "Skipping .tmux and .tmux.conf"
         installTmux="tmux "
     fi
 
-    if [[ "$(which vim >& /dev/null)" ]]; then
+    if [[ $(which vim) ]]; then
         if [[ "$(vim --version | grep 7.4)" ]]; then
             # Use new .vimrc
             cp `pwd`/.vimrc ~/.vimrc
             cp -r `pwd`/.vim ~/.vim
         fi
     else
+        echo "Skipping .vim and .vimrc"
         installVim="vim "
     fi
 }
@@ -70,26 +72,14 @@ function checkProgs(){
 function installProgs(){
     if [[ $installBash != "" || $installTmux != "" || $installVim != "" ]]; then
         case "$distro" in
-            'arch') echo "Updating pacman and installing ${installBash}${installTmux}${installVim}"
+            "arch") echo "Updating pacman and installing ${installBash}${installTmux}${installVim}"
                 `sudo pacman -Syu $installBash $installTmux $installVim`
                 ;;
-            'centos') echo "Updating yum and installing ${installBash}${installTmux}${installVim}"
+            "rhel fedora") echo "Updating yum and installing ${installBash}${installTmux}${installVim}"
                 `sudo yum update`
                 `sudo yum install $installBash $installTmux $installVim`
                 ;;
-            'debian') echo "Updating apt-get and installing ${installBash}${installTmux}${installVim}"
-                `sudo apt-get update && sudo apt-get upgrade`
-                `sudo apt-get install $installBash $installTmux $installVim`
-                ;;
-            'fedora') echo "Updating dnf and installing ${installBash}${installTmux}${installVim}"
-                `sudo dnf update`
-                `sudo dnf install $installBash $installTmux $installVim`
-                ;;
-            'rhel') echo "Updating yum and installing ${installBash}${installTmux}${installVim}"
-                `sudo yum update`
-                `sudo yum install $installBash $installTmux $installVim`
-                ;;
-            'ubuntu') echo "Updating apt-get and installing ${installBash}${installTmux}${installVim}"
+            "debian") echo "Updating apt-get and installing ${installBash}${installTmux}${installVim}"
                 `sudo apt-get update && sudo apt-get upgrade`
                 `sudo apt-get install $installBash $installTmux $installVim`
                 ;;
