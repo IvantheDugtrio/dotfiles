@@ -1,24 +1,17 @@
 " Vimrc and gVimrc file
-"==== Vundle ====
 set nocompatible                    " be iMproved!
 set nobackup                        " no annoying file.txt~ files
 
-set ttimeoutlen=200             " Exit insert mode quickly
-set timeoutlen=1000             " But still give me time to enter leader commands
+set ttimeoutlen=1               " Exit insert mode quickly
+set timeoutlen=100              " But still give me time to enter leader commands
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+" vim-plug
+call plug#begin('~/.vim/plugged')
+Plug 'tpope/vim-fugitive'
+Plug 'bling/vim-airline'
+Plug 'scrooloose/nerdcommenter'
+call plug#end()
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'bling/vim-airline'
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
