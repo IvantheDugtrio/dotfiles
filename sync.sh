@@ -44,12 +44,12 @@ function checkProgs(){
         # tmux is installed!
         if [[ "$(tmux -V | grep 2)" ]]; then
             # Use new .tmux.conf
-            exec cp `pwd`/.tmux.conf ~/.tmux.conf
-            exec cp -r `pwd`/.tmux ~/.tmux
+            cp `pwd`/.tmux.conf ~/.tmux.conf
+            cp -r `pwd`/.tmux ~/.tmux
         else
             # use old .tmux.conf
-            exec cp `pwd`/.tmux.conf.old ~/.tmux.conf
-            exec cp -r `pwd`/.tmux ~/.tmux
+            cp `pwd`/.tmux.conf.old ~/.tmux.conf
+            cp -r `pwd`/.tmux ~/.tmux
         fi
     else
         echo "Skipping .tmux and .tmux.conf"
@@ -59,8 +59,8 @@ function checkProgs(){
     if [[ $(which vim) ]]; then
         if [[ "$(vim --version | grep 7.4)" ]]; then
             # Use new .vimrc
-            exec cp `pwd`/.vimrc ~/.vimrc
-            exec cp -r `pwd`/.vim ~/.vim
+            cp `pwd`/.vimrc ~/.vimrc
+            cp -r `pwd`/.vim ~/.vim
         fi
     else
         echo "Skipping .vim and .vimrc"
