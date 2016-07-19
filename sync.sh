@@ -26,13 +26,26 @@ function getSysInfo(){
 # Check for bash, tmux, and vim
 function checkProgs(){
     if [[ $(which bash) ]]; then
-        if [[ "$distro" == "bsd" ]]; then
-            cp `pwd`/.bashrc ~/.bash_profile
-        elif [[ "$distro" == "win32" ]]; then
-            # Figure out later
-            cp `pwd`/.bashrc ~/.bashrc
-        elif [[ "$distro" != "" ]]; then
-            cp `pwd`/.bashrc ~/.bashrc
+        echo "Do you want tmux to start by default (y/N)? "
+        read $1
+        if [[ $1 == "y" || $1 == "Y" ]]; then
+            if [[ "$distro" == "bsd" ]]; then
+                cp `pwd`/.bashrc_notmux ~/.bash_profile
+            elif [[ "$distro" == "win32" ]]; then
+                # Figure out later
+                cp `pwd`/.bashrc_notmux ~/.bashrc
+            elif [[ "$distro" != "" ]]; then
+                cp `pwd`/.bashrc_notmux ~/.bashrc
+            fi
+        else
+            if [[ "$distro" == "bsd" ]]; then
+                cp `pwd`/.bashrc ~/.bash_profile
+            elif [[ "$distro" == "win32" ]]; then
+                # Figure out later
+                cp `pwd`/.bashrc ~/.bashrc
+            elif [[ "$distro" != "" ]]; then
+                cp `pwd`/.bashrc ~/.bashrc
+            fi
         fi
     else
         # Skip for now
@@ -45,11 +58,11 @@ function checkProgs(){
         if [[ "$(tmux -V | grep 2)" ]]; then
             # Use new .tmux.conf
             cp `pwd`/.tmux.conf ~/.tmux.conf
-            cp -r `pwd`/.tmux ~/.tmux
+            cp -r `pwd`/.tmux ~/
         else
             # use old .tmux.conf
             cp `pwd`/.tmux.conf.old ~/.tmux.conf
-            cp -r `pwd`/.tmux ~/.tmux
+            cp -ar `pwd`/.tmux ~/
         fi
     else
         echo "Skipping .tmux and .tmux.conf"
@@ -58,9 +71,12 @@ function checkProgs(){
 
     if [[ $(which vim) ]]; then
         if [[ "$(vim --version | grep 7.4)" ]]; then
+            if [ -d ~/.vim ]; then
+                rm -rf ~/.vim
+            fi
             # Use new .vimrc
             cp `pwd`/.vimrc ~/.vimrc
-            cp -r `pwd`/.vim ~/.vim
+            cp -ar `pwd`/.vim ~/
         fi
     else
         echo "Skipping .vim and .vimrc"
