@@ -26,18 +26,10 @@ function getSysInfo(){
 # Check for bash, tmux, and vim
 function checkProgs(){
     if [[ $(which bash) ]]; then
-        echo "Do you want tmux to start by default (y/N)? "
-        read $1
-        if [[ $1 == "y" || $1 == "Y" ]]; then
-            if [[ "$distro" == "bsd" ]]; then
-                cp `pwd`/.bashrc_notmux ~/.bash_profile
-            elif [[ "$distro" == "win32" ]]; then
-                # Figure out later
-                cp `pwd`/.bashrc_notmux ~/.bashrc
-            elif [[ "$distro" != "" ]]; then
-                cp `pwd`/.bashrc_notmux ~/.bashrc
-            fi
-        else
+        echo -n "Do you want tmux to start by default (y/N)? "
+        read tmuxprompt
+        if [[ "$tmuxprompt" == "y" || "$tmuxprompt" == "Y" ]]; then
+            echo "Starting tmux by default"
             if [[ "$distro" == "bsd" ]]; then
                 cp `pwd`/.bashrc ~/.bash_profile
             elif [[ "$distro" == "win32" ]]; then
@@ -45,6 +37,15 @@ function checkProgs(){
                 cp `pwd`/.bashrc ~/.bashrc
             elif [[ "$distro" != "" ]]; then
                 cp `pwd`/.bashrc ~/.bashrc
+            fi
+        else
+            if [[ "$distro" == "bsd" ]]; then
+                cp `pwd`/.bashrc_notmux ~/.bash_profile
+            elif [[ "$distro" == "win32" ]]; then
+                # Figure out later
+                cp `pwd`/.bashrc_notmux ~/.bashrc
+            elif [[ "$distro" != "" ]]; then
+                cp `pwd`/.bashrc_notmux ~/.bashrc
             fi
         fi
     else
