@@ -32,20 +32,26 @@ function checkProgs(){
             echo "Starting tmux by default"
             if [[ "$distro" == "bsd" ]]; then
                 cp `pwd`/.bashrc ~/.bash_profile
+                source ~/.bash_profile
             elif [[ "$distro" == "win32" ]]; then
                 # Figure out later
                 cp `pwd`/.bashrc ~/.bashrc
+                source ~/.bashrc
             elif [[ "$distro" != "" ]]; then
                 cp `pwd`/.bashrc ~/.bashrc
+                source ~/.bashrc
             fi
         else
             if [[ "$distro" == "bsd" ]]; then
                 cp `pwd`/.bashrc_notmux ~/.bash_profile
+                source ~/.bash_profile
             elif [[ "$distro" == "win32" ]]; then
                 # Figure out later
                 cp `pwd`/.bashrc_notmux ~/.bashrc
+                source ~/.bashrc
             elif [[ "$distro" != "" ]]; then
                 cp `pwd`/.bashrc_notmux ~/.bashrc
+                source ~/.bashrc
             fi
         fi
     else
