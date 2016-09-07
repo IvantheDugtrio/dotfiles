@@ -10,6 +10,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-fugitive'
 Plug 'bling/vim-airline'
 Plug 'scrooloose/nerdcommenter'
+Plug 'rhysd/vim-gfm-syntax'
 call plug#end()
 
 filetype plugin indent on    " required
