@@ -105,6 +105,11 @@ if [[ "$(which vim)" ]]; then
     alias v='vim'
 fi
 
+# alias for nan
+if [[ "$(which nan)" ]]; then
+    alias man='nan'
+fi
+
 # aliases for system package managers
 if [[ "$(which apt-get >& /dev/null)" ]]; then
     alias agu='sudo apt-get update && sudo apt-get upgrade'
