@@ -1,0 +1,7 @@
+[user]
+	email = idedios@usc.edu
+	name = Ivan De Dios
+[credential]
+	helper = cache
+[core]
+	excludesfile = /home/idedios/.gitignore_global

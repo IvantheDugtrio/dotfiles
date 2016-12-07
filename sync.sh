@@ -60,6 +60,12 @@ function checkProgs(){
         installBash="bash "
     fi
 
+    if [[ $(which git) ]]; then
+        # git is installed!
+        cp `pwd`/.gitconfig ~/.gitconfig
+        cp `pwd`/.gitignore_global ~/.gitignore_global
+    fi
+
     if [[ $(which tmux) ]]; then
         # tmux is installed!
         if [[ "$(tmux -V | grep 2)" ]]; then
