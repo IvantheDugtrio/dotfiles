@@ -89,24 +89,39 @@ function checkProgs(){
         echo "Skipping .vim and .vimrc"
         installVim="vim "
     fi
+
+    if [[ $(which zsh) ]]; then
+        echo "Would you like to install oh-my-zsh (y/N)? "
+        read ohmyzshprompt
+        if [[ "$ohmyzshprompt" == "y" || "$ohmyzshprompt" == "Y" ]]; then
+            echo "Installing oh-my-zsh"
+            sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+        fi
+    else
+        echo "Would you like to install zsh (y/N)? "
+        read zshprompt
+        if [[ "$zshprompt" == "y" || "$zshprompt" == "Y" ]]; then
+            installZsh="zsh "
+        fi
+    fi
 }
 
 # Install bash, tmux, or vim
 function installProgs(){
     if [[ $installBash != "" || $installTmux != "" || $installVim != "" ]]; then
         case "$distro" in
-            "arch") echo "Updating pacman and installing ${installBash}${installTmux}${installVim}"
-                `sudo pacman -Syu $installBash $installTmux $installVim`
+            "arch") echo "Updating pacman and installing ${installBash}${installTmux}${installVim}${installZsh}"
+                `sudo pacman -Syu $installBash$installTmux$installVim$installZsh`
                 ;;
-            "rhel fedora") echo "Updating yum and installing ${installBash}${installTmux}${installVim}"
+            "rhel fedora") echo "Updating yum and installing ${installBash}${installTmux}${installVim}${installZsh}"
                 `sudo yum update`
-                `sudo yum install $installBash $installTmux $installVim`
+                `sudo yum install $installBash$installTmux$installVim$installZsh`
                 ;;
-            "debian") echo "Updating apt-get and installing ${installBash}${installTmux}${installVim}"
+            "debian") echo "Updating apt-get and installing ${installBash}${installTmux}${installVim}${installZsh}"
                 `sudo apt-get update && sudo apt-get upgrade`
-                `sudo apt-get install $installBash $installTmux $installVim`
+                `sudo apt-get install $installBash$installTmux$installVim$installZsh`
                 ;;
-            *) echo "Install ${installBash}${installTmux}${installVim}manually"
+            *) echo "Install ${installBash}${installTmux}${installVim}${installZsh}manually"
                 ;;
         esac
     fi
