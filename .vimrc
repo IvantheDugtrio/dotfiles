@@ -9,6 +9,7 @@ set timeoutlen=100              " But still give me time to enter leader command
 call plug#begin('~/.vim/plugged')
 Plug 'tyrannicaltoucan/vim-quantum'
 Plug 'vim-airline/vim-airline'
+Plug 'tmux-plugins/vim-tmux'
 call plug#end()
 
 filetype plugin indent on    " required
@@ -29,6 +30,7 @@ set autoindent                      " Retain indentation on next line
 set smartindent                     " Turn on autoindenting of blocks
 
 set t_Co=256
+set t_u7=
 
 "==== Syntax highlighting and coloring ===="
 syntax on

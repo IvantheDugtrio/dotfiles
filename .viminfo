@@ -11,7 +11,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/set back
+~MSle0~/TERM
 
 # Last Substitute Search Pattern:
 ~MSle0&-AA
@@ -21,15 +21,19 @@ $-AA-R1
 
 # Command Line History (newest to oldest):
 :q
-|2,0,1658433499,,"q"
+|2,0,1658441425,,"q"
+:wq
+|2,0,1658441411,,"wq"
+:PlugInstall
+|2,0,1658440716,,"PlugInstall"
+:w
+|2,0,1658440714,,"w"
+:12
+|2,0,1658440576,,"12"
+:q!
+|2,0,1658437807,,"q!"
 :1R:q
 |2,0,1658433495,,"1R:q"
-:w
-|2,0,1658433342,,"w"
-:wq
-|2,0,1658433111,,"wq"
-:PlugInstall
-|2,0,1658433077,,"PlugInstall"
 :Plug
 |2,0,1658433039,,"Plug"
 :PlugRemove
@@ -46,8 +50,6 @@ $-AA-R1
 |2,0,1657571377,,"w samplesheet.csv.bk"
 :Q
 |2,0,1657306573,,"Q"
-:q!
-|2,0,1657236492,,"q!"
 :%retab!
 |2,0,1657231624,,"%retab!"
 :set noexpandtab
@@ -62,10 +64,42 @@ $-AA-R1
 |2,0,1657228510,,"w /mnt/dataset01/"
 
 # Search String History (newest to oldest):
+?/background
+|2,1,1658441325,47,"background"
+?/TERM
+|2,1,1658441266,47,"TERM"
+?/export
+|2,1,1658441132,47,"export"
+?/screen
+|2,1,1658441103,47,"screen"
+?/scree
+|2,1,1658441092,47,"scree"
+?/t
+|2,1,1658439875,47,"t"
+?/t_ut
+|2,1,1658439789,47,"t_ut"
+?/set back
+|2,1,1658439260,47,"set back"
+?/pasted
+|2,1,1658439025,47,"pasted"
+?/hlsearch
+|2,1,1658439012,47,"hlsearch"
+?/list
+|2,1,1658438821,47,"list"
+?/LIST
+|2,1,1658438819,47,"LIST"
+?/search
+|2,1,1658438813,47,"search"
+?/bg
+|2,1,1658438734,47,"bg"
+?/set
+|2,1,1658436550,47,"set"
+?/call
+|2,1,1658436267,47,"call"
+?/press
+|2,1,1658436124,47,"press"
 ?/colorscheme
 |2,1,1658429220,47,"colorscheme"
-?/set back
-|2,1,1658429205,47,"set back"
 ?/ZSH_
 |2,1,1658428696,47,"ZSH_"
 ? -AA
@@ -86,322 +120,385 @@ $-AA-R1
 # Debug Line History (newest to oldest):
 
 # Registers:
-"0	CHAR	0
-	ESO220628_IAD,
-|3,0,0,0,1,0,1657845686,"ESO220628_IAD,"
+"0	LINE	0
+	
+|3,0,0,1,1,0,1658439745,""
 "1	LINE	0
-	"execute pathogen#infect()
-|3,0,1,1,1,0,1658433108,"\"execute pathogen#infect()"
+	# Set default shell and colors
+	set -g default-shell /usr/bin/zsh
+|3,0,1,1,2,0,1658440774,"# Set default shell and colors","set -g default-shell /usr/bin/zsh"
 "2	LINE	0
-	" vim-pathogen
-|3,0,2,1,1,0,1658433108,"\" vim-pathogen"
+	# Set default shell and colors
+	set -g default-shell /usr/bin/zsh
+|3,0,2,1,2,0,1658440755,"# Set default shell and colors","set -g default-shell /usr/bin/zsh"
 "3	LINE	0
-	Plug 'bling/vim-airline'
-	Plug 'scrooloose/nerdcommenter'
-	Plug 'rhysd/vim-gfm-syntax'
-|3,0,3,1,3,0,1658429166,"Plug 'bling/vim-airline'","Plug 'scrooloose/nerdcommenter'","Plug 'rhysd/vim-gfm-syntax'"
+	# Set default shell and colors
+	set -g default-shell /usr/bin/zsh
+|3,0,3,1,2,0,1658440728,"# Set default shell and colors","set -g default-shell /usr/bin/zsh"
 "4	LINE	0
-	Plug 'tpope/vim-fugitive'
-	Plug 'bling/vim-airline'
-	Plug 'scrooloose/nerdcommenter'
-	Plug 'rhysd/vim-gfm-syntax'
-|3,0,4,1,4,0,1658429163,"Plug 'tpope/vim-fugitive'","Plug 'bling/vim-airline'","Plug 'scrooloose/nerdcommenter'","Plug 'rhysd/vim-gfm-syntax'"
+	
+|3,0,4,1,1,0,1658440529,""
 "5	LINE	0
-	    --gzip \
-|3,0,5,1,1,0,1658281590,"    --gzip \\"
+	set -g default-shell /usr/bin/zsh
+	set -g default-terminal "tmux-256color"
+|3,0,5,1,2,0,1658440481,"set -g default-shell /usr/bin/zsh","set -g default-terminal \"tmux-256color\""
 "6	LINE	0
-	    --gzip \
-|3,0,6,1,1,0,1658281012,"    --gzip \\"
+	set -g default-shell /usr/bin/zsh
+	
+|3,0,6,1,2,0,1658440382,"set -g default-shell /usr/bin/zsh",""
 "7	LINE	0
-	ESO220628-IAD,TGTAGAT,30,30,NTC01
-	ESO220628-IAD,GACCTGT,30,30,NTC02
-	ESO220628-IAD,AAGACGC,30,30,NTC03
-	ESO220628-IAD,TTCAATG,30,30,NTC04
-	ESO220628-IAD,CTTCCAG,30,30,NTC05
-	ESO220628-IAD,AGCTTCA,30,30,NTC06
-	ESO220628-IAD,TATGAAA,30,30,NTC07
-	ESO220628-IAD,GTGTTAG,30,30,NTC08
-	ESO220628-IAD,CCTTGTA,30,30,NTC09
-	ESO220628-IAD,ATGAAAT,30,30,NTC10
-	ESO220628-IAD,TAGAGAA,30,30,NTC11
-	ESO220628-IAD,AGACGAG,30,30,NTC12
-	ESO220628-IAD,GTCGTGG,30,30,NTC13
-	ESO220628-IAD,CACCACG,30,30,NTC14
-	ESO220628-IAD,CCACAAA,30,30,NTC15
-	ESO220628-IAD,TTATAGC,30,30,NTC16
-	ESO220628-IAD,GGCAAGC,30,30,NTC17
-	ESO220628-IAD,TTTACCG,30,30,NTC18
-	ESO220628-IAD,TCAGGGG,30,30,NTC19
-	ESO220628-IAD,TGCTCTT,30,30,NTC20
-	ESO220628-IAD,TCTGCCT,30,30,NTC21
-	ESO220628-IAD,GCAGCCC,30,30,NTC22
-	ESO220628-IAD,CGCGGAA,30,30,NTC23
-	ESO220628-IAD,ACATCCG,30,30,NTC24
-	ESO220628-IAD,ACTAAAA,30,30,NTC25
-	ESO220628-IAD,AGTTACT,30,30,NTC26
-	ESO220628-IAD,GTAGGGC,30,30,NTC27
-	ESO220628-IAD,GAAGAAC,30,30,NTC28
-	ESO220628-IAD,AGCGAGT,30,30,NTC29
-	ESO220628-IAD,CGGTTGA,30,30,NTC30
-	ESO220628-IAD,GCCTAGT,30,30,NTC31
-	ESO220628-IAD,CTGCTCC,30,30,NTC32
-	ESO220628-IAD,TGGCTGG,30,30,NTC33
-	ESO220628-IAD,CGGTCAC,30,30,NTC34
-	ESO220628-IAD,TGAGCAC,30,30,NTC35
-	ESO220628-IAD,AGTATGC,30,30,NTC36
-|3,0,7,1,36,0,1657846000,"ESO220628-IAD,TGTAGAT,30,30,NTC01","ESO220628-IAD,GACCTGT,30,30,NTC02","ESO220628-IAD,AAGACGC,30,30,NTC03","ESO220628-IAD,TTCAATG,30,30,NTC04","ESO220628-IAD,CTTCCAG,30,30,NTC05","ESO220628-IAD,AGCTTCA,30,30,NTC06","ESO220628-IAD,TATGAAA,30,30,NTC07","ESO220628-IAD,GTGTTAG,30,30,NTC08","ESO220628-IAD,CCTTGTA,30,30,NTC09","ESO220628-IAD,ATGAAAT,30,30,NTC10","ESO220628-IAD,TAGAGAA,30,30,NTC11","ESO220628-IAD,AGACGAG,30,30,NTC12",>35
-|<"ESO220628-IAD,GTCGTGG,30,30,NTC13","ESO220628-IAD,CACCACG,30,30,NTC14","ESO220628-IAD,CCACAAA,30,30,NTC15","ESO220628-IAD,TTATAGC,30,30,NTC16","ESO220628-IAD,GGCAAGC,30,30,NTC17","ESO220628-IAD,TTTACCG,30,30,NTC18","ESO220628-IAD,TCAGGGG,30,30,NTC19","ESO220628-IAD,TGCTCTT,30,30,NTC20","ESO220628-IAD,TCTGCCT,30,30,NTC21","ESO220628-IAD,GCAGCCC,30,30,NTC22","ESO220628-IAD,CGCGGAA,30,30,NTC23","ESO220628-IAD,ACATCCG,30,30,NTC24","ESO220628-IAD,ACTAAAA,30,30,NTC25",>35
-|<"ESO220628-IAD,AGTTACT,30,30,NTC26","ESO220628-IAD,GTAGGGC,30,30,NTC27","ESO220628-IAD,GAAGAAC,30,30,NTC28","ESO220628-IAD,AGCGAGT,30,30,NTC29","ESO220628-IAD,CGGTTGA,30,30,NTC30","ESO220628-IAD,GCCTAGT,30,30,NTC31","ESO220628-IAD,CTGCTCC,30,30,NTC32","ESO220628-IAD,TGGCTGG,30,30,NTC33","ESO220628-IAD,CGGTCAC,30,30,NTC34","ESO220628-IAD,TGAGCAC,30,30,NTC35","ESO220628-IAD,AGTATGC,30,30,NTC36"
+	
+|3,0,7,1,1,0,1658440210,""
 "8	LINE	0
-	ESO220621-AA,CGGTCAC,30,30,C10-NTC01
-	ESO220621-AA,TGAGCAC,30,30,C11-NTC02
-	ESO220621-AA,AGTATGC,30,30,C12-NTC03
-	ESO220621-AA,GCGCCTC,30,30,D01-NTC04
-	ESO220621-AA,CCTCAGC,30,30,D02-NTC05
-	ESO220621-AA,CAAACTC,30,30,D03-NTC06
-	ESO220621-AA,ATTCGCT,30,30,D04-NTC07
-	ESO220621-AA,AGGGCAG,30,30,D05-NTC08
-	ESO220621-AA,CTCCGTC,30,30,D06-NTC09
-	ESO220621-AA,GGTACTG,30,30,D07-NTC10
-	ESO220621-AA,TTGTCCC,30,30,D08-NTC11
-	ESO220621-AA,ATACACA,30,30,D09-NTC12
-	ESO220621-AA,GGCATAG,30,30,D10-NTC13
-	ESO220621-AA,ATATTAC,30,30,D11-NTC14
-	ESO220621-AA,GGGAATA,30,30,D12-NTC15
-|3,0,8,1,15,0,1657845973,"ESO220621-AA,CGGTCAC,30,30,C10-NTC01","ESO220621-AA,TGAGCAC,30,30,C11-NTC02","ESO220621-AA,AGTATGC,30,30,C12-NTC03","ESO220621-AA,GCGCCTC,30,30,D01-NTC04","ESO220621-AA,CCTCAGC,30,30,D02-NTC05","ESO220621-AA,CAAACTC,30,30,D03-NTC06","ESO220621-AA,ATTCGCT,30,30,D04-NTC07","ESO220621-AA,AGGGCAG,30,30,D05-NTC08","ESO220621-AA,CTCCGTC,30,30,D06-NTC09","ESO220621-AA,GGTACTG,30,30,D07-NTC10","ESO220621-AA,TTGTCCC,30,30,D08-NTC11",>38
-|<"ESO220621-AA,ATACACA,30,30,D09-NTC12","ESO220621-AA,GGCATAG,30,30,D10-NTC13","ESO220621-AA,ATATTAC,30,30,D11-NTC14","ESO220621-AA,GGGAATA,30,30,D12-NTC15"
+	bind r source-file ~/.tmux.conf \; display "Reloaded"
+|3,0,8,1,1,0,1658440210,"bind r source-file ~/.tmux.conf \\; display \"Reloaded\""
 "9	LINE	0
-	reversecomplement,0
-|3,0,9,1,1,0,1657845461,"reversecomplement,0"
+	unbind r
+|3,0,9,1,1,0,1658440209,"unbind r"
 ""-	CHAR	0
-	/
-|3,1,36,0,1,0,1658433328,"/"
+	screen
+|3,1,36,0,1,0,1658441408,"screen"
 
 # File marks:
-'0  1  0  ~/.condarc
-|4,48,1,0,1658433499,"~/.condarc"
-'1  1  0  ~/.condarc
-|4,49,1,0,1658433496,"~/.condarc"
-'2  1  15  /mnt/dataset01/esoguardv1/software/software/esoguard/run-ldx.sh
-|4,50,1,15,1658433353,"/mnt/dataset01/esoguardv1/software/software/esoguard/run-ldx.sh"
-'3  9  0  ~/.vimrc
-|4,51,9,0,1658433111,"~/.vimrc"
-'4  1  0  ~/[Plugins]
-|4,52,1,0,1658433054,"~/[Plugins]"
-'5  9  13  ~/.vimrc
-|4,53,9,13,1658432813,"~/.vimrc"
-'6  9  13  ~/.vimrc
-|4,54,9,13,1658432813,"~/.vimrc"
-'7  9  13  ~/.vimrc
-|4,55,9,13,1658432813,"~/.vimrc"
-'8  11  7  ~/.vimrc
-|4,56,11,7,1658432745,"~/.vimrc"
-'9  9  7  ~/.vimrc
-|4,57,9,7,1658432745,"~/.vimrc"
+'0  1  0  ~/.vimrc
+|4,48,1,0,1658441425,"~/.vimrc"
+'1  15  17  ~/.zshrc
+|4,49,15,17,1658441411,"~/.zshrc"
+'2  50  0  ~/.vimrc
+|4,50,50,0,1658441363,"~/.vimrc"
+'3  50  0  ~/.vimrc
+|4,51,50,0,1658441363,"~/.vimrc"
+'4  1  0  ~/.tmux.conf
+|4,52,1,0,1658441349,"~/.tmux.conf"
+'5  1  0  ~/.vimrc
+|4,53,1,0,1658441326,"~/.vimrc"
+'6  1  0  ~/.vimrc
+|4,54,1,0,1658441326,"~/.vimrc"
+'7  1  0  ~/.vimrc
+|4,55,1,0,1658441326,"~/.vimrc"
+'8  15  7  ~/.zshrc
+|4,56,15,7,1658441269,"~/.zshrc"
+'9  1  0  ~/.vimrc
+|4,57,1,0,1658441235,"~/.vimrc"
 
 # Jumplist (newest first):
--'  1  0  ~/.condarc
-|4,39,1,0,1658433499,"~/.condarc"
--'  1  0  ~/.condarc
-|4,39,1,0,1658433496,"~/.condarc"
--'  1  15  /mnt/dataset01/esoguardv1/software/software/esoguard/run-ldx.sh
-|4,39,1,15,1658433353,"/mnt/dataset01/esoguardv1/software/software/esoguard/run-ldx.sh"
--'  1  15  /mnt/dataset01/esoguardv1/software/software/esoguard/run-ldx.sh
-|4,39,1,15,1658433353,"/mnt/dataset01/esoguardv1/software/software/esoguard/run-ldx.sh"
--'  1  15  /mnt/dataset01/esoguardv1/software/software/esoguard/run-ldx.sh
-|4,39,1,15,1658433353,"/mnt/dataset01/esoguardv1/software/software/esoguard/run-ldx.sh"
--'  1  15  /mnt/dataset01/esoguardv1/software/software/esoguard/run-ldx.sh
-|4,39,1,15,1658433353,"/mnt/dataset01/esoguardv1/software/software/esoguard/run-ldx.sh"
--'  9  0  ~/.vimrc
-|4,39,9,0,1658433111,"~/.vimrc"
--'  9  0  ~/.vimrc
-|4,39,9,0,1658433111,"~/.vimrc"
--'  9  0  ~/.vimrc
-|4,39,9,0,1658433111,"~/.vimrc"
--'  9  0  ~/.vimrc
-|4,39,9,0,1658433111,"~/.vimrc"
--'  9  0  ~/.vimrc
-|4,39,9,0,1658433111,"~/.vimrc"
--'  9  0  ~/.vimrc
-|4,39,9,0,1658433111,"~/.vimrc"
--'  9  0  ~/.vimrc
-|4,39,9,0,1658433111,"~/.vimrc"
--'  9  0  ~/.vimrc
-|4,39,9,0,1658433111,"~/.vimrc"
--'  9  0  ~/.vimrc
-|4,39,9,0,1658433111,"~/.vimrc"
--'  9  0  ~/.vimrc
-|4,39,9,0,1658433111,"~/.vimrc"
--'  9  0  ~/.vimrc
-|4,39,9,0,1658433111,"~/.vimrc"
--'  9  0  ~/.vimrc
-|4,39,9,0,1658433111,"~/.vimrc"
--'  9  0  ~/.vimrc
-|4,39,9,0,1658433111,"~/.vimrc"
--'  9  0  ~/.vimrc
-|4,39,9,0,1658433111,"~/.vimrc"
--'  9  0  ~/.vimrc
-|4,39,9,0,1658433111,"~/.vimrc"
--'  9  0  ~/.vimrc
-|4,39,9,0,1658433111,"~/.vimrc"
--'  11  0  ~/.vimrc
-|4,39,11,0,1658433075,"~/.vimrc"
--'  11  0  ~/.vimrc
-|4,39,11,0,1658433075,"~/.vimrc"
--'  11  0  ~/.vimrc
-|4,39,11,0,1658433075,"~/.vimrc"
--'  11  0  ~/.vimrc
-|4,39,11,0,1658433075,"~/.vimrc"
--'  11  0  ~/.vimrc
-|4,39,11,0,1658433075,"~/.vimrc"
--'  11  0  ~/.vimrc
-|4,39,11,0,1658433075,"~/.vimrc"
--'  11  0  ~/.vimrc
-|4,39,11,0,1658433075,"~/.vimrc"
--'  11  0  ~/.vimrc
-|4,39,11,0,1658433075,"~/.vimrc"
--'  11  0  ~/.vimrc
-|4,39,11,0,1658433075,"~/.vimrc"
--'  11  0  ~/.vimrc
-|4,39,11,0,1658433075,"~/.vimrc"
--'  11  0  ~/.vimrc
-|4,39,11,0,1658433075,"~/.vimrc"
--'  11  0  ~/.vimrc
-|4,39,11,0,1658433075,"~/.vimrc"
--'  11  0  ~/.vimrc
-|4,39,11,0,1658433075,"~/.vimrc"
--'  11  0  ~/.vimrc
-|4,39,11,0,1658433075,"~/.vimrc"
--'  11  0  ~/.vimrc
-|4,39,11,0,1658433075,"~/.vimrc"
--'  11  0  ~/.vimrc
-|4,39,11,0,1658433075,"~/.vimrc"
--'  1  0  ~/[Plugins]
-|4,39,1,0,1658433054,"~/[Plugins]"
--'  1  0  ~/[Plugins]
-|4,39,1,0,1658433054,"~/[Plugins]"
--'  1  0  ~/[Plugins]
-|4,39,1,0,1658433054,"~/[Plugins]"
--'  1  0  ~/[Plugins]
-|4,39,1,0,1658433054,"~/[Plugins]"
--'  1  0  ~/[Plugins]
-|4,39,1,0,1658433054,"~/[Plugins]"
--'  1  0  ~/[Plugins]
-|4,39,1,0,1658433054,"~/[Plugins]"
--'  1  0  ~/[Plugins]
-|4,39,1,0,1658433054,"~/[Plugins]"
--'  1  0  ~/[Plugins]
-|4,39,1,0,1658433054,"~/[Plugins]"
--'  1  0  ~/[Plugins]
-|4,39,1,0,1658433054,"~/[Plugins]"
--'  1  0  ~/[Plugins]
-|4,39,1,0,1658433054,"~/[Plugins]"
--'  1  0  ~/[Plugins]
-|4,39,1,0,1658433054,"~/[Plugins]"
--'  1  0  ~/[Plugins]
-|4,39,1,0,1658433054,"~/[Plugins]"
--'  1  0  ~/[Plugins]
-|4,39,1,0,1658433054,"~/[Plugins]"
--'  1  0  ~/[Plugins]
-|4,39,1,0,1658433054,"~/[Plugins]"
--'  1  0  ~/[Plugins]
-|4,39,1,0,1658433054,"~/[Plugins]"
--'  1  0  ~/[Plugins]
-|4,39,1,0,1658433054,"~/[Plugins]"
--'  2  0  ~/[Plugins]
-|4,39,2,0,1658432978,"~/[Plugins]"
--'  5  0  ~/[Plugins]
-|4,39,5,0,1658432978,"~/[Plugins]"
--'  3  0  ~/[Plugins]
-|4,39,3,0,1658432978,"~/[Plugins]"
--'  13  51  ~/.vimrc
-|4,39,13,51,1658432978,"~/.vimrc"
--'  2  0  ~/[Plugins]
-|4,39,2,0,1658432978,"~/[Plugins]"
--'  5  0  ~/[Plugins]
-|4,39,5,0,1658432978,"~/[Plugins]"
--'  3  0  ~/[Plugins]
-|4,39,3,0,1658432978,"~/[Plugins]"
--'  13  51  ~/.vimrc
-|4,39,13,51,1658432978,"~/.vimrc"
--'  2  0  ~/[Plugins]
-|4,39,2,0,1658432978,"~/[Plugins]"
--'  5  0  ~/[Plugins]
-|4,39,5,0,1658432978,"~/[Plugins]"
--'  3  0  ~/[Plugins]
-|4,39,3,0,1658432978,"~/[Plugins]"
--'  13  51  ~/.vimrc
-|4,39,13,51,1658432978,"~/.vimrc"
--'  2  0  ~/[Plugins]
-|4,39,2,0,1658432978,"~/[Plugins]"
--'  5  0  ~/[Plugins]
-|4,39,5,0,1658432978,"~/[Plugins]"
--'  3  0  ~/[Plugins]
-|4,39,3,0,1658432978,"~/[Plugins]"
--'  13  51  ~/.vimrc
-|4,39,13,51,1658432978,"~/.vimrc"
--'  2  0  ~/[Plugins]
-|4,39,2,0,1658432978,"~/[Plugins]"
--'  5  0  ~/[Plugins]
-|4,39,5,0,1658432978,"~/[Plugins]"
--'  3  0  ~/[Plugins]
-|4,39,3,0,1658432978,"~/[Plugins]"
--'  13  51  ~/.vimrc
-|4,39,13,51,1658432978,"~/.vimrc"
--'  2  0  ~/[Plugins]
-|4,39,2,0,1658432978,"~/[Plugins]"
--'  5  0  ~/[Plugins]
-|4,39,5,0,1658432978,"~/[Plugins]"
--'  3  0  ~/[Plugins]
-|4,39,3,0,1658432978,"~/[Plugins]"
--'  13  51  ~/.vimrc
-|4,39,13,51,1658432978,"~/.vimrc"
--'  2  0  ~/[Plugins]
-|4,39,2,0,1658432978,"~/[Plugins]"
--'  5  0  ~/[Plugins]
-|4,39,5,0,1658432978,"~/[Plugins]"
--'  3  0  ~/[Plugins]
-|4,39,3,0,1658432978,"~/[Plugins]"
--'  13  51  ~/.vimrc
-|4,39,13,51,1658432978,"~/.vimrc"
--'  2  0  ~/[Plugins]
-|4,39,2,0,1658432978,"~/[Plugins]"
--'  5  0  ~/[Plugins]
-|4,39,5,0,1658432978,"~/[Plugins]"
--'  3  0  ~/[Plugins]
-|4,39,3,0,1658432978,"~/[Plugins]"
--'  13  51  ~/.vimrc
-|4,39,13,51,1658432978,"~/.vimrc"
--'  2  0  ~/[Plugins]
-|4,39,2,0,1658432978,"~/[Plugins]"
--'  5  0  ~/[Plugins]
-|4,39,5,0,1658432978,"~/[Plugins]"
--'  3  0  ~/[Plugins]
-|4,39,3,0,1658432978,"~/[Plugins]"
--'  13  51  ~/.vimrc
-|4,39,13,51,1658432978,"~/.vimrc"
--'  2  0  ~/[Plugins]
-|4,39,2,0,1658432978,"~/[Plugins]"
--'  5  0  ~/[Plugins]
-|4,39,5,0,1658432978,"~/[Plugins]"
--'  3  0  ~/[Plugins]
-|4,39,3,0,1658432978,"~/[Plugins]"
--'  13  51  ~/.vimrc
-|4,39,13,51,1658432978,"~/.vimrc"
--'  2  0  ~/[Plugins]
-|4,39,2,0,1658432978,"~/[Plugins]"
--'  5  0  ~/[Plugins]
-|4,39,5,0,1658432978,"~/[Plugins]"
--'  3  0  ~/[Plugins]
-|4,39,3,0,1658432978,"~/[Plugins]"
--'  13  51  ~/.vimrc
-|4,39,13,51,1658432978,"~/.vimrc"
--'  2  0  ~/[Plugins]
-|4,39,2,0,1658432978,"~/[Plugins]"
--'  5  0  ~/[Plugins]
-|4,39,5,0,1658432978,"~/[Plugins]"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1658441425,"~/.vimrc"
+-'  15  17  ~/.zshrc
+|4,39,15,17,1658441411,"~/.zshrc"
+-'  15  17  ~/.zshrc
+|4,39,15,17,1658441411,"~/.zshrc"
+-'  15  17  ~/.zshrc
+|4,39,15,17,1658441411,"~/.zshrc"
+-'  15  17  ~/.zshrc
+|4,39,15,17,1658441411,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1658441404,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1658441404,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1658441404,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1658441404,"~/.zshrc"
+-'  50  0  ~/.vimrc
+|4,39,50,0,1658441363,"~/.vimrc"
+-'  50  0  ~/.vimrc
+|4,39,50,0,1658441363,"~/.vimrc"
+-'  50  0  ~/.vimrc
+|4,39,50,0,1658441363,"~/.vimrc"
+-'  50  0  ~/.vimrc
+|4,39,50,0,1658441363,"~/.vimrc"
+-'  50  0  ~/.vimrc
+|4,39,50,0,1658441363,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1658441358,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1658441358,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1658441358,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1658441358,"~/.vimrc"
+-'  1  0  ~/.tmux.conf
+|4,39,1,0,1658441349,"~/.tmux.conf"
+-'  1  0  ~/.tmux.conf
+|4,39,1,0,1658441349,"~/.tmux.conf"
+-'  1  0  ~/.tmux.conf
+|4,39,1,0,1658441349,"~/.tmux.conf"
+-'  1  0  ~/.tmux.conf
+|4,39,1,0,1658441349,"~/.tmux.conf"
+-'  1  0  ~/.tmux.conf
+|4,39,1,0,1658441349,"~/.tmux.conf"
+-'  1  0  ~/.tmux.conf
+|4,39,1,0,1658441349,"~/.tmux.conf"
+-'  1  0  ~/.tmux.conf
+|4,39,1,0,1658441349,"~/.tmux.conf"
+-'  1  0  ~/.tmux.conf
+|4,39,1,0,1658441349,"~/.tmux.conf"
+-'  1  0  ~/.tmux.conf
+|4,39,1,0,1658441349,"~/.tmux.conf"
+-'  1  0  ~/.tmux.conf
+|4,39,1,0,1658441349,"~/.tmux.conf"
+-'  1  0  ~/.tmux.conf
+|4,39,1,0,1658441349,"~/.tmux.conf"
+-'  1  0  ~/.tmux.conf
+|4,39,1,0,1658441349,"~/.tmux.conf"
+-'  1  0  ~/.tmux.conf
+|4,39,1,0,1658441349,"~/.tmux.conf"
+-'  1  0  ~/.tmux.conf
+|4,39,1,0,1658441349,"~/.tmux.conf"
+-'  1  0  ~/.tmux.conf
+|4,39,1,0,1658441349,"~/.tmux.conf"
+-'  1  0  ~/.tmux.conf
+|4,39,1,0,1658441349,"~/.tmux.conf"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1658441326,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1658441326,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1658441326,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1658441326,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1658441326,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1658441326,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1658441326,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1658441326,"~/.vimrc"
+-'  15  7  ~/.zshrc
+|4,39,15,7,1658441269,"~/.zshrc"
+-'  15  7  ~/.zshrc
+|4,39,15,7,1658441269,"~/.zshrc"
+-'  15  7  ~/.zshrc
+|4,39,15,7,1658441269,"~/.zshrc"
+-'  15  7  ~/.zshrc
+|4,39,15,7,1658441269,"~/.zshrc"
+-'  15  7  ~/.zshrc
+|4,39,15,7,1658441269,"~/.zshrc"
+-'  15  7  ~/.zshrc
+|4,39,15,7,1658441269,"~/.zshrc"
+-'  15  7  ~/.zshrc
+|4,39,15,7,1658441269,"~/.zshrc"
+-'  15  7  ~/.zshrc
+|4,39,15,7,1658441269,"~/.zshrc"
+-'  15  7  ~/.zshrc
+|4,39,15,7,1658441269,"~/.zshrc"
+-'  15  7  ~/.zshrc
+|4,39,15,7,1658441269,"~/.zshrc"
+-'  15  7  ~/.zshrc
+|4,39,15,7,1658441269,"~/.zshrc"
+-'  15  7  ~/.zshrc
+|4,39,15,7,1658441269,"~/.zshrc"
+-'  15  7  ~/.zshrc
+|4,39,15,7,1658441269,"~/.zshrc"
+-'  15  7  ~/.zshrc
+|4,39,15,7,1658441269,"~/.zshrc"
+-'  15  7  ~/.zshrc
+|4,39,15,7,1658441269,"~/.zshrc"
+-'  15  7  ~/.zshrc
+|4,39,15,7,1658441269,"~/.zshrc"
+-'  15  7  ~/.zshrc
+|4,39,15,7,1658441269,"~/.zshrc"
+-'  15  7  ~/.zshrc
+|4,39,15,7,1658441269,"~/.zshrc"
+-'  15  7  ~/.zshrc
+|4,39,15,7,1658441269,"~/.zshrc"
+-'  15  7  ~/.zshrc
+|4,39,15,7,1658441269,"~/.zshrc"
+-'  15  7  ~/.zshrc
+|4,39,15,7,1658441269,"~/.zshrc"
+-'  15  7  ~/.zshrc
+|4,39,15,7,1658441269,"~/.zshrc"
+-'  15  7  ~/.zshrc
+|4,39,15,7,1658441269,"~/.zshrc"
+-'  15  7  ~/.zshrc
+|4,39,15,7,1658441269,"~/.zshrc"
+-'  15  7  ~/.zshrc
+|4,39,15,7,1658441269,"~/.zshrc"
+-'  15  7  ~/.zshrc
+|4,39,15,7,1658441269,"~/.zshrc"
+-'  15  7  ~/.zshrc
+|4,39,15,7,1658441269,"~/.zshrc"
+-'  15  7  ~/.zshrc
+|4,39,15,7,1658441269,"~/.zshrc"
+-'  15  7  ~/.zshrc
+|4,39,15,7,1658441269,"~/.zshrc"
+-'  15  7  ~/.zshrc
+|4,39,15,7,1658441269,"~/.zshrc"
+-'  15  7  ~/.zshrc
+|4,39,15,7,1658441269,"~/.zshrc"
+-'  15  7  ~/.zshrc
+|4,39,15,7,1658441269,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1658441266,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1658441266,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1658441266,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1658441266,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1658441266,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1658441266,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1658441266,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1658441266,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1658441266,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1658441266,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1658441266,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1658441266,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1658441266,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1658441266,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1658441266,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1658441266,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1658441266,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1658441266,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1658441266,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1658441266,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1658441266,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1658441266,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1658441266,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1658441266,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1658441266,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1658441266,"~/.zshrc"
 
 # History of marks within files (newest to oldest):
+
+> ~/.vimrc
+	*	1658441424	0
+	"	1	0
+	^	12	28
+	.	12	27
+	+	13	0
+	+	15	0
+	+	13	33
+	+	50	18
+	+	14	29
+	+	11	24
+	+	11	0
+	+	13	0
+	+	11	13
+	+	11	1
+	+	11	0
+	+	13	0
+	+	15	0
+	+	14	6
+	+	11	0
+	+	51	0
+	+	79	0
+	+	74	0
+	+	72	0
+	+	69	0
+	+	72	0
+	+	69	0
+	+	70	0
+	+	67	0
+	+	66	0
+	+	52	0
+	+	58	0
+	+	35	0
+	+	34	0
+	+	35	0
+	+	58	0
+	+	1	0
+	+	36	0
+	+	2	2
+	+	45	60
+	+	44	28
+	+	43	39
+	+	42	42
+	+	48	32
+	+	54	13
+	+	33	7
+	+	12	27
+
+> ~/.zshrc
+	*	1658441410	0
+	"	15	17
+	^	15	18
+	.	15	17
+	+	11	37
+	+	15	26
+	+	16	0
+	+	15	17
+
+> ~/.tmux.conf
+	*	1658441344	0
+	"	1	0
+	^	1	0
+	.	2	0
+	+	5	0
+	+	7	0
+	+	3	0
+	+	5	0
+	+	4	0
+	+	3	0
+	+	1	29
+	+	6	0
+	+	5	0
+	+	12	16
+	+	8	6
+	+	13	28
+	+	3	0
+	+	2	0
+
+> ~/.tmux.conf.local
+	*	1658441040	0
+	"	145	0
+
+> ~/dotfiles/.tmux.conf
+	*	1658439808	0
+	"	1	0
+	^	1	0
+	.	1	0
+	+	1	0
+	+	3	20
+	+	1	0
+
+> ~/dotfiles/.vimrc
+	*	1658439797	0
+	"	1	0
+	^	32	9
+	.	32	7
+	+	32	7
+
+> ~/.ssh/id_rsa.pub
+	*	1658434297	0
+	"	1	0
+
+> ~/dotfiles/README.md
+	*	1658433820	0
+	"	2	51
+	^	2	52
+	.	2	51
+	+	2	75
+	+	3	0
+	+	2	51
+
+> ~/dotfiles/.viminfo
+	*	1658433645	0
+	"	1	0
 
 > ~/.condarc
 	*	1658433498	0
@@ -413,34 +510,6 @@ $-AA-R1
 	^	1	15
 	.	1	15
 	+	1	15
-
-> ~/.vimrc
-	*	1658433108	0
-	"	9	0
-	^	11	52
-	.	9	0
-	+	10	0
-	+	12	0
-	+	10	33
-	+	46	18
-	+	11	29
-	+	9	24
-	+	9	0
-	+	10	0
-	+	9	13
-	+	9	1
-	+	9	0
-	+	10	0
-	+	12	0
-	+	11	6
-	+	9	0
-
-> ~/.zshrc
-	*	1658428710	0
-	"	11	37
-	^	11	38
-	.	11	37
-	+	11	37
 
 > /mnt/dataset01/scratch/ldx-batch.sh
 	*	1658281632	0
@@ -689,10 +758,3 @@ $-AA-R1
 	+	2	7
 	+	1	7
 	+	10	15
-
-> ~/.tmux.conf
-	*	1657160183	0
-	"	11	0
-	.	12	0
-	+	6	0
-	+	12	0
