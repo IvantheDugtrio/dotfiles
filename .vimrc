@@ -7,10 +7,8 @@ set timeoutlen=100              " But still give me time to enter leader command
 
 " vim-plug
 call plug#begin('~/.vim/plugged')
-Plug 'tpope/vim-fugitive'
-Plug 'bling/vim-airline'
-Plug 'scrooloose/nerdcommenter'
-Plug 'rhysd/vim-gfm-syntax'
+Plug 'tyrannicaltoucan/vim-quantum'
+Plug 'vim-airline/vim-airline'
 call plug#end()
 
 filetype plugin indent on    " required
@@ -44,6 +42,8 @@ set t_ut=
 "==== Syntax highlighting and coloring ===="
 syntax on
 set background=dark
+set termguicolors
+colorscheme quantum
 hi Normal    guifg=white guibg=black ctermfg=white
 hi Search    guifg=black guibg=cyan  ctermfg=black ctermbg=cyan
 hi VertSplit guifg=darkgrey guibg=NONE ctermfg=darkgrey ctermbg=NONE cterm=bold gui=bold
