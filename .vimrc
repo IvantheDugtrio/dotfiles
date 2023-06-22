@@ -36,6 +36,8 @@ set t_u7=
 syntax on
 set background=dark
 set termguicolors
+let g:quantum_black=1
+let g:quantum_italics=1
 colorscheme quantum
 
 "==== Searching ===="
